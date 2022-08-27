@@ -3,12 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>FirstQuery</title>
+<style>.showRed{color:red}</style>
 </head>
 <body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<p class="showRed">Hello World</p>
+	<p  id="phone">23826015</p>
+	<button id="b1">Test1</button>
+	<button id="b2">Test2</button>
+	<button id="b3" class="showRed">Test-change-color</button>
 <script>
+	function b1_Click() {
+		alert("Button b1 clicked");
+		alert("type 1 expression");
+	}
+	function b2_Click() {
+		alert("Button b2 clicked");
+	}
+	
 	function start(){
-		alert("jQuery test success");
+		$("#b1").click(b1_Click);
+		$("#b2").click(b2_Click);
+		$("#b3").click(function() {
+			 $("#phone").addClass("showRed");
+			 alert("type 2 expression");
+		});
 	}
 	$(document).ready(start);
 </script>
