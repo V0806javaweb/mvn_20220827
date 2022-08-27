@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<h1>Show Test.jsp</h1>
+<script>
+    function resultA(data,status){
+    	//alert(status);
+    	$("#message1").html(data);
+    }
+
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("FirstQuery.html", resultA);
+        });
+    });
+    
+    function resultB(data,status){
+    	//alert(status);
+    	$("#message2").html(data);
+    }
+
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("Test.jsp", resultB);
+        });
+    });
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to FirstQuery.html and get the result back</button>
+<div id="message1"></div>
+<button>Send an HTTP GET request to Test.jsp and get the result back</button>
+<div id="message2"></div>
+</body>
+</html>
