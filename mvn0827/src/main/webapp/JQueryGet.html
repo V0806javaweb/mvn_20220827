@@ -11,7 +11,7 @@
     }
 
     $(document).ready(function () {
-        $("button").click(function () {
+        $("#testbA").click(function () {
             $.get("FirstQuery.html", resultA);
         });
     });
@@ -22,7 +22,7 @@
     }
 
     $(document).ready(function () {
-        $("button").click(function () {
+        $("#testbB").click(function () {
             $.get("Test.jsp", resultB);
         });
     });
@@ -30,9 +30,9 @@
 </head>
 <body>
 
-<button>Send an HTTP GET request to FirstQuery.html and get the result back</button>
+<button id="testbA">Send an HTTP GET request to FirstQuery.html and get the result back</button>
 <div id="message1"></div>
-<button>Send an HTTP GET request to Test.jsp and get the result back</button>
+<button id="testbB">Send an HTTP GET request to Test.jsp and get the result back</button>
 <div id="message2"></div>
 </body>
 </html>
